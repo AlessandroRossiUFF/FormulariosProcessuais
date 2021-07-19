@@ -91,7 +91,8 @@ def delete(id):
     flash('"{}" was successfully deleted!'.format(post['title']))
     return redirect(url_for('index'))
 
-#######################################
+##############################
+#LOGIN LOGIN LOGIN LOGIN LOGIN 
 class User(flask_login.UserMixin):
     pass
 
@@ -153,7 +154,8 @@ def logout():
 @login_manager.unauthorized_handler
 def unauthorized_handler():
     return 'Unauthorized'
-#######################################
+#LOGIN LOGIN LOGIN LOGIN LOGIN 
+##############################
 
 login_manager.init_app(web_site)
 web_site.run(host='0.0.0.0', port=8080)
