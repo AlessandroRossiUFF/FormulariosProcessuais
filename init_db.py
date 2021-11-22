@@ -4,7 +4,7 @@ connection = sqlite3.connect('database.db')
 #abrirá uma conexão a um arquivo de banco de dados chamado database.db
 
 with open('schema.sql') as f: 
-    connection.executescript(f.read())#executa várias instruções SQL de uma só vez que criarão a tabela posts
+    connection.executescript(f.read())
 
 cur = connection.cursor()#Crie um objeto de cursor que permita que você utilize o método execute() dele para executar duas instruções SQL INSERT para adicionar duas postagens do blog em sua tabela posts
 

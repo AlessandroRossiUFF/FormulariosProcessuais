@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>{% block title %} Informações Básicas {% endblock %}</h1>
+<hr>
+<form method="post">
+    <div class="form-group">
+        <label for="codigo">Código do Processo</label>
+        <input type="text" name="codigo"
+               placeholder="Código do Processo" class="form-control"
+               value="{{ request.form['title'] }}"></input>
+    </div>   
+    <div class="form-group">
+        <label for="cliente">Nome do Cliente</label>
+        <input type="text" name="cliente"
+               placeholder="Nome do Cliente" class="form-control"
+               value="{{ request.form['title'] }}"></input>
+
+    </div>
+
+    <div>
+      <label for="nascimento">CPF do Ciente:</label>
+      <input type="text" name="nascimento"
+      <span class="validity"></span>
+    </div>
+
+
+<hr>
+
+    <div class="form-group">
+        <label for="observacoes">Breve Descrição do Processo</label>
+        <textarea name="observacoes" rows="6" cols="30" placeholder="Descrição do processo"
+                  class="form-control">{{ request.form['content'] }}</textarea>
+    </div>
+
+    <div>
+      <label for="inicio">Data do Inicio:</label>
+      <input type="date" id="bday" name="inicio" required pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}">
+      <span class="validity"></span>
+    </div>
+    <div>
+      <label for="prazo">Data do Fim: _</label>
+      <input type="date" id="bday" name="prazo" required pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}">
+      <span class="validity"></span>
+    </div>
+    <div class="form-group">
+        <label for="valor">Preço R$</label>
+        <input type="number" min="0.00" max="10000.00" name="valor" step="1.00"
+               placeholder="Preço" class="form-control"
+               value="{{ request.form['title'] }}"></input>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Salvar e Prosseguir</button>
+    </div>
+
+
+</form>
+{% endblock content %}

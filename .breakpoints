@@ -1,17 +1,47 @@
 {
   "files": {
+    "blog.py": [
+      {
+        "id": "ee8384ad-a1ac-416f-a570-c4ae16220c0c",
+        "line": 22,
+        "version": 493,
+        "index": 664
+      }
+    ],
     "main.py": [
       {
+        "id": "819f314e-40ea-4020-89c3-18727c2d3788",
+        "line": 1,
+        "version": 33,
+        "index": 0
+      },
+      {
         "id": "245686c8-0d0b-4dfd-8d0c-e3b164e26dbc",
-        "line": 95,
-        "version": 351,
-        "index": 3365
+        "line": 1,
+        "version": 33,
+        "index": 0
       },
       {
         "id": "269f5cb2-a16a-492e-82e0-8607466cde18",
-        "line": 95,
-        "version": 351,
-        "index": 3365
+        "line": 1,
+        "version": 33,
+        "index": 0
+      }
+    ],
+    "templates/index.html": [
+      {
+        "id": "90e1098f-9025-4961-8cbf-5d85c2d0171a",
+        "line": 25,
+        "version": 627,
+        "index": 792
+      }
+    ],
+    "templates/post.html": [
+      {
+        "id": "a5371315-9a98-418a-912b-5e8ad81c064d",
+        "line": 1,
+        "version": 1,
+        "index": 0
       }
     ]
   }

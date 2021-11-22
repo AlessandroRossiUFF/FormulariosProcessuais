@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>{% block title %}Código do Processo: {{ processo['codigo'] }} {% endblock %}</h2>
+    <span class="badge badge-primary">ID do processo: {{ processo['id'] }}</span>
+    <p>Cliente: {{ processo['cliente'] }}</p>
+    <p>CPF: {{ processo['cpf'] }}</p>
+    <p>Observações: {{ processo['observacoes'] }}</p>
+    <p>Prazo: {{ processo['fim'] }} (YYYY/MM/DD)</p>
+{% endblock %}

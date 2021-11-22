@@ -1,27 +1,38 @@
-<html>
-    <head>
-        <title>Meu primeiro site :D</title>
-    </head>
-    <body>
-        Aprovado ou Reprovado
+{% extends 'base.html' %}
 
-        <div>
-            <form method="get">
-                Primeira Nota:
-                <input type="text" name="primeira">
-                <br>
-                Segunda Nota:
-                <input type="text" name="segunda">
-                <br>
-                <input type="submit" value="Enviar">
-            </form>
-        </div>
+{% block content %}
 
-        {% if resultado %}
-        <div>
-            {{resultado}} com média {{media}}!!!
-        </div>
-        {% endif %}
+    <h1 style="text-align:center">{% block title %} Processos Recentes {% endblock %}</h1>
+    <hr>
+<!--
+    {% for post in posts %}
+        <a href="{{ url_for('post', post_id=post['id']) }}">
+            <h2>{{ post['title'] }}</h2>
+        </a>
+        <span class="badge badge-primary">{{ post['created'] }}</span>
 
-    </body>
-</html>
+        <a href="{{ url_for('edit', id=post['id']) }}">
+            <span class="badge badge-warning">Edit</span>
+        </a>
+
+        <hr>
+    {% endfor %}
+-->
+    {% for processo in processos %}
+      <a href="{{ url_for('processo', id=processo['id']) }}"">
+        <h6 href="#" style="text-align:center">Processo: {{ processo['codigo'] }} - Cliente: {{ processo['cliente'] }} - Andamento: {{ processo['andamento'] }} - Prazo: {{ processo['fim'] }}</h6>
+      </a>
+
+        <a href="{{ url_for('editar', id=processo['id']) }}" align="center">
+            <span class="badge badge-warning" align="center">Edit</span>
+        </a>
+        
+        <hr>
+    {% endfor %}
+
+  
+
+
+{% endblock %}
+
+
