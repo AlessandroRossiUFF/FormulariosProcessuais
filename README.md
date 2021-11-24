@@ -1,7 +1,5 @@
 https://www.digitalocean.com/community/tutorials/how-to-make-a-web-application-using-flask-in-python-3-pt
 
-
-
 https://jinja.palletsprojects.com/en/2.10.x/templates/#template-inheritance
 
 https://getbootstrap.com/

@@ -19,7 +19,7 @@
     {% endfor %}
 -->
     {% for processo in processos %}
-      <a href="{{ url_for('processo', id=processo['id']) }}"">
+      <a href="{{ url_for('processo', id=processo['id']) }}">
         <h6 href="#" style="text-align:center">Processo: {{ processo['codigo'] }} - Cliente: {{ processo['cliente'] }} - Andamento: {{ processo['andamento'] }} - Prazo: {{ processo['fim'] }}</h6>
       </a>
 

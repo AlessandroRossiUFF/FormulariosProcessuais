@@ -136,6 +136,24 @@ def editar(id):
     post = get_processo(id)
 
     if request.method == 'POST':
+        title = request.form['codigo']
+        content = request.form['content']
+
+        if not title:
+            flash('Conteudo required!')
+        else:
+            conn = get_db_connectionP()
+            conn.execute('UPDATE processos SET codigo = ?, observacoes = ?'
+                         ' WHERE id = ?',
+                         (title, content, id))
+            conn.commit()
+            conn.close()
+            return redirect(url_for('index'))
+
+    return render_template('editar.html', post=post)
+    post = get_processo(id)
+
+    if request.method == 'POST':
         title = request.form['title']
         content = request.form['content']
 
